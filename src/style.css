@@ -10,13 +10,15 @@
   
   body {
     font-family: sans-serif;
+    
   }
+  
   
   i {
     cursor: pointer;
   }
   
-  a {
+   a{
     text-decoration: none;
     color: white;
   }

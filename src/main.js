@@ -36,6 +36,13 @@ let shopItemsData = [
     desc: "Fresh Organic NON GMO local grew Pomegranate.",
     img: "images/pomegranate.jpg",
 },
+{
+    id:"g",
+    name: "ORGANIC Pears",
+    price: 3.59,
+    desc: "Fresh Organic NON GMO local grew pears.",
+    img: "images/pear.jpg"
+},
 ];
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
