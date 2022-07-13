@@ -7,16 +7,49 @@
   <title>NON GMO Product.</title>
   <link rel="stylesheet" href="src/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-</head>
-<body>
   
-  <div class="navbar">
-    <a href="product.html">
-    <h2>NON GMO Product.</h2>
-    <a href="home.html">
-      <h2>home</h2>
-    </a>
-  </a>
+</head>
+
+<style>
+  main {
+    background-color: aquamarine;
+  }
+  .conv {
+    margin-top: 1px;
+    margin-left: 5px;
+  }
+  .ff {
+    text-align: center;
+    height: 100px;
+    width: 340px;
+    border: 2px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+    color: aliceblue;
+    margin-top: 2rem;
+    background-color: rgb(77, 19, 70);
+  }
+</style>
+
+<body>
+<header>
+  
+  <nav>
+    <button class="hamburger" id="hamburger">
+        <h1 class="hamburger">&#9776;</h1>
+</button>
+
+  <ul class="nav-ul" id="nav-ul">
+    <li><a href="/">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">contact use</a></li>
+    <li><a href="special.html">special</a></li>
+    <li><a href="Product.html">Products</a></li>
+    <li><a href="member.html">Become a member!</a></li>
+  </ul>
+</a>
+</nav>
 
   <a href="cart.html">
     <div class="cart">
@@ -24,10 +57,52 @@
         <div id="cartAmount" class="cartAmount">0</div>
       </div>
       </a>
-      
     </div>
+</header>
+<main>
+  <h4 class="ff">Prices are in USD, but we accept CAD and MXN currency. You can use our application to convert your currency.
+  </h1>
+  <i class="conv"> 
+    
+  </i>
+  <aside>
+  <div class="wrapper">
+    <form action="#">
+      <div class="amount">
+        <h>Enter Amount</h>
+        <input type="text" value="1">
+      </div>
+      <div class="drop-list">
+        <div class="from">
+          <h>From</h>
+          <div class="select-box">
+            <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+            <select>  </select>
+          </div>
+        </div>
+        <div class="bi-arrow-left-right"><i class="fas fa-exchange-alt"></i></div>
+        <div class="to">
+          <h>To</h>
+          <div class="select-box">
+            <img src="https://flagcdn.com/48x36/ca.png" alt="flag">
+            <select> </select>
+          </div>
+        </div>
+      </div>
+      <div class="exchange-rate">Getting exchange rate...</div>
+      <button>Get Exchange Rate</button>
+    </form>
+  </div>
+</aside>
 
-  
+<div id="label" class="text-center"></div>
+
+  <div class="shopping-cart" id="shopping-cart"></div>
+</main>
 </body>
+<script src="src/Data.js"></script>
 <script src="src/cart.js"></script>
+
+<script src="src/country-list.js"></script>
+    <script src="src/script.js"></script>
 </html>

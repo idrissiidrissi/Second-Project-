@@ -1,49 +1,6 @@
 let shop = document.getElementById("shop");
 
-let shopItemsData = [
-{
-    id:"a",
-    name: "Organic Pomegranate",
-    price: 4.99,
-    desc: "Fresh Organic NON GMO local grew Pomegranate.",
-    img: "images/pomegranate.jpg"
-},
-{
-    id:"b",
-    name: "ORGANIC Pears",
-    price: 3.59,
-    desc: "Fresh Organic NON GMO local grew pears.",
-    img: "images/pear.jpg"
-},
-{
-    id:"c",
-    name: "peaches",
-    price: 1.99,
-    desc: "Fresh Organic NON GMO local grew peaches.",
-    img: "images/peaches.jpg"
-},
-{
-    id:"d",
-    name: "ORGANIC Grapes",
-    price: 2.99,
-    desc: "Fresh Organic NON GMO local grew grapes.",
-    img: "images/grapes.jpg"
-},
-{
-    id:"f",
-    name: "pomegranate",
-    price: 3.99,
-    desc: "Fresh Organic NON GMO local grew Pomegranate.",
-    img: "images/pomegranate.jpg",
-},
-{
-    id:"g",
-    name: "ORGANIC Pears",
-    price: 3.59,
-    desc: "Fresh Organic NON GMO local grew pears.",
-    img: "images/pear.jpg"
-},
-];
+
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -59,7 +16,7 @@ let generateShop = () => {
        <h3>${name}</h3>
        <p>${desc}</p>
        <div class="price-quantity">
-       <h2>$ ${price} per-Lip</h2>
+       <h2>$${price} /Lp</h2>
        <div class="buttons">
          <i onclick="decrement(${id})" class="bi bi-dash-circle-fill"></i>
          <div id=${id} class="quantity">
@@ -81,7 +38,7 @@ generateShop();
 
 /**
  * ! used to increase the selected product item quantity by 1
- */
+ **/
 
  let increment = (id) => {
     let selctedItem = id;
@@ -128,11 +85,10 @@ basket = basket.filter((x) => x.item !== 0);
 
  let calculation = () => {
     let cartIcon = document.getElementById("cartAmount");
-    cartIcon.innerHTML = basket.map((x) => x.item).reduce((x,y)=>x+y, 0)
+    cartIcon.innerHTML = basket.map((x) => x.item).reduce((x,y)=>x + y, 0);
     
  };
-
+ 
  calculation()
 
-
-  
+ 
