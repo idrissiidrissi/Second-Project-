@@ -30,6 +30,9 @@
     margin-top: 2rem;
     background-color: rgb(77, 19, 70);
   }
+  ii {
+    color: yellow;
+  }
 </style>
 
 <body>
@@ -37,7 +40,7 @@
   
   <nav>
     <button class="hamburger" id="hamburger">
-        <h1 class="hamburger">&#9776;</h1>
+        <h1 class="hamburger">menu &#9776;</h1>
 </button>
 
   <ul class="nav-ul" id="nav-ul">
@@ -60,13 +63,13 @@
     </div>
 </header>
 <main>
-  <h4 class="ff">Prices are in USD, but we accept CAD and MXN currency. You can use our application to convert your currency.
+  <h4 class="ff"><ii>Notes:</ii> Prices are in USD, but we accept CAD and MXN currency. You can use our application to convert your currency.
   </h1>
   <i class="conv"> 
     
   </i>
   <aside>
-  <div class="wrapper">
+  <div class="Exchange">
     <form action="#">
       <div class="amount">
         <h>Enter Amount</h>
@@ -100,9 +103,8 @@
   <div class="shopping-cart" id="shopping-cart"></div>
 </main>
 </body>
-<script src="src/Data.js"></script>
+<script  src="src/Data.json"></script>
 <script src="src/cart.js"></script>
 
-<script src="src/country-list.js"></script>
-    <script src="src/script.js"></script>
+    
 </html>

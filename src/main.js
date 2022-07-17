@@ -1,7 +1,5 @@
 let shop = document.getElementById("shop");
 
-
-
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = () => {
@@ -91,4 +89,4 @@ basket = basket.filter((x) => x.item !== 0);
  
  calculation()
 
- 
+

@@ -1,3 +1,4 @@
+
 let ShoppingCart = document.getElementById("shopping-cart");
 let label = document.getElementById("label");
 
@@ -174,8 +175,24 @@ let TotalAmount = () => {
       
 
     return (label.innerHTML = `
-    <h2>Total : $ ${amount}</h2>
-    <button class="checkout">Checkout</button>
+    <h2>Total : $${amount}</h2>
+    
+
+    <button class="checkout" data-order-target="#order">Checkout</button>
+  <div class="order" id="order">
+    <div class="order-header">
+      <div class="title">We apologize!</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="order-body">
+        We are working to offer online order soon. For now you can 
+        order by phone and pick up at the store in less than 2 hours!
+        <a class="con"href="tel:859">call to order</a></p>
+    </div>
+  </div>
+  <div id="overlay"></div>
+  </div>
+
     <button onclick="clearCart()" class="removeAll">Clear Cart</button>
     `);
   } else return;
@@ -196,6 +213,16 @@ let clearCart = () => {
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
+/** 
+    *! HAMBURGER BUTTEN
+    */
+
+    const hamburger = document.getElementById('hamburger');
+    const navUl = document.getElementById('nav-ul');
+    hamburger.addEventListener('click',()=>{
+        navUl.classList.toggle("show");
+    });
+
 /**
  * converter
  */
@@ -215,7 +242,12 @@ let clearCart = () => {
          loadFlag(e.target);
      });
  }
- 
+ /*
+function newFunction() {
+  const produce = require('./produce.json');
+  const parsedProduce = JSON.parse(produce);
+}
+*/
  function loadFlag(element){
      for(let code in country_list){
          if(code == element.value){
@@ -262,6 +294,48 @@ let clearCart = () => {
          exchangeRateTxt.innerText = "Something is wrong";
      });
  }
+
+
+
+ /*order add to cart buttons*/
+
+const openOrderButtons = document.querySelectorAll('[data-order-target]')
+const closeOrderButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openOrderButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const order = document.querySelector(button.dataset.orderTarget)
+    openOrder(order)
+  })
+})
+
+overlay.addEventListener('click', function (){
+    const orders = document.querySelectorAll('.order.active');
+    orders.forEach(order => {
+      closeOrder(order);
+    });
+  })
+
+closeOrderButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const order = button.closest('.order')
+    closeOrder(order)
+  })
+})
+
+function openOrder(order) {
+  if (order == null) return
+  order.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeOrder(order) {
+  if (order == null) return
+  order.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
 
 
 

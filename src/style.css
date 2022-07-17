@@ -82,7 +82,7 @@ header {
       padding: 0.2px;
     }
     
-      .con {
+      .home-links {
         color: blue;
       font-size: large;
       text-decoration-line: underline;
@@ -357,26 +357,27 @@ main {
      }}
 
 /*Registration Form:*/
-.become {
-  background-color: #fff;
-  text-align: center;
-}
-
+.become,
 .registration {
   background-color: #fff;
-  
+  text-align: center;
+  background-color: #9d9ac0;
+  margin: 1px;
+  border-radius: 5px;
+  margin-top: 8px;
 }
+
 .become
-  .wrapperr {
+  .wrapper {
       width: 800px;
       max-width: 20%;
       margin: 0 auto;
       margin-left: auto;
       margin-right: auto;
-     
+      
   
   }
-  .wrapperr label {
+  .wrapper label {
       display: block;
       margin: 0.5em 0;
       margin-left: auto;
@@ -388,11 +389,35 @@ main {
       padding: 0.5em;
 
   }
-  .wrapperr input[type="submit"]{
-      font-size: 25px;
+  .wrapper input[type="submit"]{
+      font-size: 18px;
       color: blue;
-  }
+      margin: 0.2em 0;
+      cursor: pointer;
+      }
+      .wrapper input[type="reset"]{
+        font-size: 18px;
+        color: blue;
+        margin: 0.2em 0;
+        cursor: pointer;
+        }
 
+      /* login*/
+      .or-login {
+        text-align: center;
+        background-color: #9d9ac0;
+        border-radius: 4px;
+        
+        align-content: center;
+      
+      }
+      .login [type="login"]{
+        font-size: 18px;
+        color: blue;
+        margin: 0.2em 0;
+        
+        }
+  
   .columns-desktop {
       display: flex;
       margin-left: 50px;
@@ -441,7 +466,7 @@ h2 {
 /**
 *!converter
 */
-.wrapper{
+.Exchange{
   
   margin-left: auto;
   margin-right: auto;
@@ -542,4 +567,98 @@ form button{
 form button:hover{
   background: #4534fe;
 }
+
+
+/*order*/
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.order {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+  font-weight: bold;
+  
+}
+
+.order.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.order-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.order-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: yellow;
+}
+
+
+.order-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+.close-button:hover {
+    color: red;
+
+}
+.order-body {
+  padding: 10px 15px;
+}
+button {
+    cursor: pointer;
+}
+
+button:hover{
+    color: red;
+}
+button {
+  background-color: aqua;
+  font-weight: bold;
+}
+.con {
+  color: #4534fe;
+  text-decoration: underline;
+}
+
+
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
        
