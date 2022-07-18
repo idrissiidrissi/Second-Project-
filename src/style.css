@@ -108,7 +108,7 @@ header {
   right: -10px;
   font-size: 16px;
   background-color: red;
-  color: white;
+  color: white,(245, 243, 243),(243, 237, 237) (221, 14, 14);
   padding: 3px;
   border-radius: 3px;
 }
@@ -160,13 +160,16 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
 }
+
+ 
 
 .buttons {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .bi-dash-circle-fill {
@@ -240,6 +243,7 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+  
 }
 
 .cart-item-price {
@@ -394,14 +398,29 @@ main {
       color: blue;
       margin: 0.2em 0;
       cursor: pointer;
+      width: 210px;
+      
+      
       }
       .wrapper input[type="reset"]{
         font-size: 18px;
         color: blue;
         margin: 0.2em 0;
         cursor: pointer;
+        width: 210px;
+        
         }
 
+        .shop {
+          font-style: italic;
+        }
+ h2{
+  background-color: yellow;
+  
+}
+h2 {
+  background-color: yello;
+}
       /* login*/
       .or-login {
         text-align: center;
@@ -417,7 +436,11 @@ main {
         margin: 0.2em 0;
         
         }
-  
+        .login-button {
+          width: 200px;
+          color: #4534fe;
+          background-color: #3333;
+        }
   .columns-desktop {
       display: flex;
       margin-left: 50px;
@@ -495,10 +518,10 @@ form h{
   margin-bottom: 4px;
 }
 form input{
-  height: 20px;
-  font-size: 15px;
+  height: 25px;
+  font-size: 20px;
   padding: 0 15px;
-  border: 1px solid #999;
+  border: 2px solid #999;
 }
 form input:focus{
   padding: 0 14px;

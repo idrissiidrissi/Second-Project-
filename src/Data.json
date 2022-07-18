@@ -1,71 +1,76 @@
-let shopItemsData = 
+ 
 
-
+ let shopItemsData = 
+ 
 [
 
   {
  
-        "id":"a",
+        "id":"a1",
         "name": "Organic Pomegranate",
         "price": "4.00",
         "desc": "Fresh Organic NON GMO local grew Pomegranate.",
         "img": "images/pomegranate.jpg"
-    },
+  },
     {
-        "id":"b",
+        "id":"a2",
         "name": "ORGANIC Pears",
         "price": "3.50",
         "desc": "Fresh Organic NON GMO local grew pears.",
         "img": "images/pear.jpg"
     },
     {
-        "id":"c",
+        "id":"a3",
         "name": " Organic peaches",
         "price": "2.00",
         "desc": "Fresh Organic NON GMO local grew peaches.",
         "img": "images/peaches.jpg"
     },
     {
-        "id":"d",
+        "id":"a4",
         "name": "ORGANIC Grapes",
         "price": "3.00",
         "desc": "Fresh Organic NON GMO local grew grapes.",
         "img": "images/grapes.jpg"
     },
     {
-        "id":"f",
-        "name": " Organic pomegranate",
+        "id":"a5",
+        "name": " Organic Apricot",
         "price": "3.50",
-        "desc": "Fresh Organic NON GMO local grew Pomegranate.",
-        "img": "images/pomegranate.jpg"
+        "desc": "Fresh Organic NON GMO local grew Apricot.",
+        "img": "images/apricot.jpg"
     },
     {
-        "id":"g",
-        "name": "ORGANIC Pears",
+        "id":"a6",
+        "name": "ORGANIC Avocados.",
         "price": "2.50",
-        "desc": "Fresh Organic NON GMO local grew pears.",
-        "img": "images/pear.jpg"
+        "desc": "Fresh Organic NON GMO local grew Avocados.",
+        "img": "images/avocados.jpg"
 
     },
     {
-        "id":"y",
-        "name": "ORGANIC Pears",
+        "id":"a7",
+        "name": "ORGANIC Oranges",
         "price": "2.50",
-        "desc": "Fresh Organic NON GMO local grew pears.",
-        "img": "images/pear.jpg"
+        "desc": "Fresh Organic NON GMO local grew Oranges.",
+        "img": "images/oranges.jpg"
+    },
+    {
+        "id":"a8",
+        "name": "ORGANIC Apples",
+        "price": "2.50",
+        "desc": "Fresh Organic NON GMO local grew Apples.",
+        "img": "images/apple.jpg"  
     }
 
-    ]
+]
 
-    /**
-  *! country-list
-  */
 
-  let country_list = {
+let country_list = {
     "USD" : "US",
     "MXN" : "MX",
     "CAD" : "CA",
-
+  
     /*
     "AED" : "AE",
     "AFN" : "AF",
@@ -225,8 +230,6 @@ let shopItemsData =
     "ZMK" : "ZM",
     "ZWD" : "ZW"
     */
-}
-
-
-
+} 
+   
  
