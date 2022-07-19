@@ -24,9 +24,7 @@
 
             <ul class="nav-ul" id="nav-ul">
                 <li><a href="/">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact use</a></li>
-                <li><a href="special.html">special</a></li>
+                
                 <li><a href="Product.html">Products</a></li>
                 <li id="link6"><a href="member.html">Become a member!</a></li>
             </ul>
@@ -95,9 +93,7 @@
     <nav>
         <ul>
             <li class="H"><a href="/">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact use</a></li>
-            <li><a href="special.html">special</a></li>
+            
             <li><a href="Product.html">Product</a></li>
             <li><a href="member.html">Become a member!</a></li>
         </ul>
@@ -109,31 +105,13 @@
     
   </footer>
   </body>
-<script src="src/Data.json"></script>
+<script></script>
 <script src="src/Data.js"></script>
 
 
 <script>
 
-    /** 
-*! Registration Form
-*/
-
-const wrapper = document.querySelector('.wrapper'),
-form  = wrapper.querySelectorAll('.form'),
-submitInput = form[0].querySelector('input[type="submit"]');
-
-function getDataForm(e){
-    e.preventDefault();
-    var formData = new FormData(form[0]);
-    alert( formData.get('nameField') + ' - '+ 
-    formData.get('emailField') + ' - '+ formData.get('passwordField')
-    + '-'+ formData.get('addressField'));
-} 
-document.addEventListener('DOMContentLoaded', function(){
-submitInput.addEventListener('click', getDataForm, false);
-}, false);
-
+    
 </script>
 </html>
 

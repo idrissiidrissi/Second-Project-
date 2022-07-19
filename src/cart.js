@@ -1,3 +1,4 @@
+import shopItemsData from './Data.json' assert {type: 'json'}
 
 let ShoppingCart = document.getElementById("shopping-cart");
 let label = document.getElementById("label");
@@ -61,7 +62,7 @@ let generateCartItems = () => {
             </div>
           </div>
 
-       <h3>$${item*price}</h3>
+       <h3>$${(item*price).toFixed(2)}</h3>
         
   
         </div>
@@ -82,12 +83,15 @@ let generateCartItems = () => {
 };
 
 generateCartItems();
-
-/**
+  /**
  * ! used to increase the selected product item quantity by 1
  */
+   
+
+
 
 let increment = (id) => {
+  
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
 
@@ -110,6 +114,7 @@ let increment = (id) => {
  */
 
 let decrement = (id) => {
+  
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
 
@@ -124,6 +129,11 @@ let decrement = (id) => {
   generateCartItems();
   localStorage.setItem("data", JSON.stringify(basket));
 };
+
+window.decrement = decrement
+
+window.increment = increment
+
 
 /**
  * ! To update the digits of picked items on each item card
@@ -154,13 +164,14 @@ let removeItem = (id) => {
   localStorage.setItem("data", JSON.stringify(basket));
   
 };
-
+window.removeItem = removeItem
 /**
  * ! Used to calculate total amount of the selected Products
  * ! with specific quantity
  */
 
 let TotalAmount = () => {
+  
   if (basket.length !== 0) {
     let amount = basket
       .map((x) => {
@@ -176,8 +187,9 @@ let TotalAmount = () => {
 
     return (label.innerHTML = `
     <h2>Total : $${amount}</h2>
-    
 
+
+    
     <button class="checkout" data-order-target="#order">Checkout</button>
   <div class="order" id="order">
     <div class="order-header">
@@ -193,7 +205,8 @@ let TotalAmount = () => {
   <div id="overlay"></div>
   </div>
 
-    <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+  <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+
     `);
   } else return;
 };
@@ -206,25 +219,18 @@ TotalAmount();
  * ! Used to clear cart, and remove everything from local storage
  */
 
-let clearCart = () => {
+ let clearCart = () => {
   basket = [];
   generateCartItems();
   calculation();
   localStorage.setItem("data", JSON.stringify(basket));
+
 };
 
+window.clearCart = clearCart
+
 /** 
-    *! HAMBURGER BUTTEN
-    */
-
-    const hamburger = document.getElementById('hamburger');
-    const navUl = document.getElementById('nav-ul');
-    hamburger.addEventListener('click',()=>{
-        navUl.classList.toggle("show");
-    });
-
-/**
- * converter
+ *! converter
  */
 
  const dropList = document.querySelectorAll("form select"),
@@ -242,12 +248,7 @@ let clearCart = () => {
          loadFlag(e.target);
      });
  }
- /*
-function newFunction() {
-  const produce = require('./produce.json');
-  const parsedProduce = JSON.parse(produce);
-}
-*/
+ 
  function loadFlag(element){
      for(let code in country_list){
          if(code == element.value){
@@ -285,7 +286,7 @@ function newFunction() {
          amountVal = 1;
      }
      exchangeRateTxt.innerText = "Getting exchange rate...";
-     let url = `https://v6.exchangerate-api.com/v6/f757a81ae12e899bb7cab585/latest/${fromCurrency.value}`;
+     let url = `https://v6.exchangerate-api.com/v6/5264215096b29c3dac752f88/latest/${fromCurrency.value}`;
      fetch(url).then(response => response.json()).then(result =>{
          let exchangeRate = result.conversion_rates[toCurrency.value];
          let totalExRate = (amountVal * exchangeRate).toFixed(2);
@@ -293,11 +294,15 @@ function newFunction() {
      }).catch(() =>{
          exchangeRateTxt.innerText = "Something is wrong";
      });
- }
+    }
 
 
+    
 
- /*order add to cart buttons*/
+
+    /**
+  *! Checkout buttons
+  */
 
 const openOrderButtons = document.querySelectorAll('[data-order-target]')
 const closeOrderButtons = document.querySelectorAll('[data-close-button]')
@@ -337,8 +342,4 @@ function closeOrder(order) {
 }
 
 
-
-
-
-
-
+ 

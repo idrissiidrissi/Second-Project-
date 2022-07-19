@@ -1,8 +1,14 @@
+import shopItemsData from './Data.json' assert {type: 'json'}
+
+
+
+
 let shop = document.getElementById("shop");
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = () => {
+    window.generateShop = generateShop
     return (shop.innerHTML = shopItemsData
         .map((x) => {
             let { id, name, price, desc, img } = x;
@@ -39,6 +45,7 @@ generateShop();
  **/
 
  let increment = (id) => {
+    window.decrement = decrement 
     let selctedItem = id;
     let search = basket.find((x) => x.id === selctedItem.id);
     if(search === undefined) {
@@ -82,6 +89,7 @@ basket = basket.filter((x) => x.item !== 0);
  };
 
  let calculation = () => {
+    window.increment = increment
     let cartIcon = document.getElementById("cartAmount");
     cartIcon.innerHTML = basket.map((x) => x.item).reduce((x,y)=>x + y, 0);
     
@@ -90,12 +98,4 @@ basket = basket.filter((x) => x.item !== 0);
  calculation()
 
 
-/**
-  *! country-list
-  */
 
-  
-
-
-
- 
