@@ -4,14 +4,14 @@
  
         "id":"a1",
         "name": "Organic Pomegranate",
-        "price": "4.00",
+        "price": "4.99",
         "desc": "Fresh Organic NON GMO local grew Pomegranate.",
         "img": "images/pomegranate.jpg"
   },
     {
         "id":"a2",
         "name": "ORGANIC Pears",
-        "price": "3.50",
+        "price": "3.59",
         "desc": "Fresh Organic NON GMO local grew pears.",
         "img": "images/pear.jpg"
     },

@@ -1,8 +1,5 @@
 import shopItemsData from './Data.json' assert {type: 'json'}
 
-
-
-
 let shop = document.getElementById("shop");
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
@@ -44,8 +41,8 @@ generateShop();
  * ! used to increase the selected product item quantity by 1
  **/
 
- let increment = (id) => {
-    window.decrement = decrement 
+  let increment = (id) => {
+    
     let selctedItem = id;
     let search = basket.find((x) => x.id === selctedItem.id);
     if(search === undefined) {
@@ -63,7 +60,7 @@ localStorage.setItem("data", JSON.stringify(basket));
 
 /**
  * ! used to decrease the selected product item quantity by 1
- */
+ **/
 
  let decrement = (id) => {
     let selctedItem = id;
@@ -80,6 +77,12 @@ basket = basket.filter((x) => x.item !== 0);
     
     localStorage.setItem("data", JSON.stringify(basket));
  };
+
+ window.decrement = decrement
+
+window.increment = increment
+
+
  
  let update = (id) => {
     let search = basket.find((x) => x.id === id);

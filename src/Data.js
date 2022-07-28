@@ -1,7 +1,7 @@
 
 
 /** 
-    *! HAMBURGER BUTTEN
+    *! HAMBURGER MENU
     */
 
     const hamburger = document.getElementById('hamburger');
@@ -196,4 +196,3 @@ function getDataForm(e){
 document.addEventListener('DOMContentLoaded', function(){
 submitInput.addEventListener('click', getDataForm, false);
 }, false);  
- 

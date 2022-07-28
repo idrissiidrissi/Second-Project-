@@ -15,9 +15,16 @@ html, body {
 body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
-  
-  
-}
+  }
+
+  main {
+    justify-content: center;
+      display: grid;
+      padding-top: 4em;
+      padding-bottom: 3em;
+      min-height: 85%;
+      
+  }
 
 i {
   cursor: pointer;
@@ -37,13 +44,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  
   flex-direction: row;
   justify-content: space-between;
   background-color: #e1e6e2;
   color: white;
   padding: 20px 30px;
-  margin-bottom: 30px;
+  
 }
 /**
 *!footer styles
@@ -56,6 +62,8 @@ header {
 *!home pege styles
 */
 .paragraph {
+  font-family: swap;
+  font-style: italic;
   padding: 1rem;
   background-color: #fff;
   font-size: 1.5em;
@@ -72,7 +80,10 @@ header {
   padding: 0.2px;
   background-color: aqua;
     }
-
+.column img {
+  width: 150px;
+  height: 160px;
+}
     
     
     .market {
@@ -82,11 +93,19 @@ header {
       padding: 0.2px;
     }
     
-      .home-links {
-        color: blue;
-      font-size: large;
-      text-decoration-line: underline;
-      }
+    a:visited,
+ a:link {
+     color: blue;
+}
+
+ a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+ a:active{
+    color: red;
+}
+      
       
 /**
 *!cart icon styles
@@ -95,8 +114,8 @@ header {
   position: relative;
   background-color: #fff;
   color: #212529;
-  font-size: 30px;
-  padding: 5px;
+  font-size: 25px;
+  padding: 3px;
   border-radius: 4px;
   
   
@@ -105,10 +124,10 @@ header {
 .cartAmount {
   position: absolute;
   top: -15px;
-  right: -10px;
+  right: -15px;
   font-size: 16px;
   background-color: red;
-  color: white,(245, 243, 243),(243, 237, 237) (221, 14, 14);
+  color: white;
   padding: 3px;
   border-radius: 3px;
 }
@@ -122,7 +141,18 @@ header {
   gap: 30px;
   justify-content: center;
   margin-bottom: 0px;
+  font-style: italic;
   
+}
+h2{
+background-color: yellow;
+border-radius: 4px;
+}
+
+h3 {
+  font-family: swap;
+  color: #07b20f;
+  background-color: #212529;
 }
 
 @media (max-width: 1000px) {
@@ -145,7 +175,9 @@ header {
 }
 .item img {
   width: 100%;
+  height: 150px;
   border-radius: 2px 2px 0 0;
+  
 }
 
 .details {
@@ -153,6 +185,7 @@ header {
   flex-direction: column;
   padding: 10px;
   gap: 10px;
+  
 }
 
 .price-quantity {
@@ -225,7 +258,7 @@ header {
 *! style for cart-item
 */
 .cart-item {
-  border: 2px solid #212529;
+  border:2px solid #212529;
   border-radius: 5px;
   display: flex;
   background-color: aqua;
@@ -243,8 +276,7 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
-  
-}
+  }
 
 .cart-item-price {
   background-color: yellow;
@@ -253,14 +285,12 @@ header {
   padding: 0.1px 0.1px;
 }
 
-h {
-  background-color: yellow;
-}
 
-/*HAM*/
-header {
-  background-color: bla;
-}
+/** 
+
+*!HAMBURGER Menu-Links styles
+*/
+
 
 nav a:visited,
 nav a:link {
@@ -278,24 +308,13 @@ nav a:active{
 li#link1 a {
      background-color: blue;
 }
-#about li#link2 a {
+li#link2 a {
     background-color:  blue;
 }
-#contact li#link3 a {
+li#link3 a {
     background-color:  blue;
 }
-#special li#link4 a {
-    background-color:  blue;
-}
- li#link5 a {
-    background-color:  blue;
-}
- li#link6 a {
-    background-color: blue;
-}
-
-
-    
+ 
 nav > ul > {
 display: inline;
 flex-wrap: wrap;
@@ -306,24 +325,9 @@ padding: 0;
     list-style: none;
     margin: 0 5px 0 5px;
     }
-/*
-    .farmimg {
-        width: 50em;
-        height: 20em;
-        max-width: 100%;
-        border-radius: 20px;
-    }
 
-    */
 
-main {
-  justify-content: center;
-    display: grid;
-    padding-top: 4em;
-    padding-bottom: 3em;
-    min-height: 85%;
-    
-}
+
 
 .hamburger {
     background-color: transparent;
@@ -360,7 +364,9 @@ main {
          
      }}
 
-/*Registration Form:*/
+/**
+* !Registration Form:
+*/
 .become,
 .registration {
   background-color: #fff;
@@ -399,9 +405,10 @@ main {
       margin: 0.2em 0;
       cursor: pointer;
       width: 210px;
-      
-      
       }
+
+      
+
       .wrapper input[type="reset"]{
         font-size: 18px;
         color: blue;
@@ -411,17 +418,11 @@ main {
         
         }
 
-        .shop {
-          font-style: italic;
-        }
- h2{
-  background-color: yellow;
-  
-}
-h2 {
-  background-color: yello;
-}
-      /* login*/
+        
+
+      /**
+      * !login form styles
+      */
       .or-login {
         text-align: center;
         background-color: #9d9ac0;
@@ -441,63 +442,16 @@ h2 {
           color: #4534fe;
           background-color: #3333;
         }
-  .columns-desktop {
-      display: flex;
-      margin-left: 50px;
-      margin-right: 1px;
-      flex-direction: row;
-      flex-wrap: wrap;
-  }
 
-  @media (max-width: 968px) {
-      main {
-          display: grid;
-      }}
-
-
-
-
-/* contact
-
-table {
-  background-color: #fff;
-  width: 185px;
-  
-  
-  
-}
-h2 {
-  font-style: italic;
-  color: #fff;
-
-}
-
-.h9 {
-  background-color: rgb(241, 241, 241);
-}
-
-.The {
-  background-color: rgb(231, 166, 166);
-  display: inline;
-  width: 2em;
-  }*/
-  img {
-    height: 160px;
-    width: 150px;
-    /*border-radius: 110px;*/
-}
 /**
-*!converter
+*!converter app styles
 */
 .Exchange{
   
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  /*
-  align-items: center;
-  text-align: center;
-  position: absolute;*/
+  
   width: 340px;
   padding: 3px;
   border-radius: 7px;
@@ -592,11 +546,9 @@ form button:hover{
 }
 
 
-/*order*/
-
-*, *::after, *::before {
-  box-sizing: border-box;
-}
+/** 
+* ! Checkout button styles
+*/
 
 .order {
   position: fixed;
@@ -648,6 +600,7 @@ form button:hover{
 .order-body {
   padding: 10px 15px;
 }
+
 button {
     cursor: pointer;
 }

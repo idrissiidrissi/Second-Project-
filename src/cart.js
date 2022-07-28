@@ -42,7 +42,7 @@ let generateCartItems = () => {
         
 
       <div class="cart-item">
-        <img width="100" src=${img} alt="" />
+        <img width="150"height="160" src=${img} alt="" />
 
         <div class="details">
         
@@ -62,7 +62,7 @@ let generateCartItems = () => {
             </div>
           </div>
 
-       <h3>$${(item*price).toFixed(2)}</h3>
+       <h2>$${(item*price).toFixed(2)}</h2>
         
   
         </div>
@@ -87,9 +87,6 @@ generateCartItems();
  * ! used to increase the selected product item quantity by 1
  */
    
-
-
-
 let increment = (id) => {
   
   let selectedItem = id;
@@ -181,7 +178,7 @@ let TotalAmount = () => {
       
       })
       
-      .reduce((x, y)=> x + y, 0).toFixed(2);
+      .reduce((x, y)=> x + y, 0).toFixed(2)
       
       
 
@@ -230,7 +227,7 @@ TotalAmount();
 window.clearCart = clearCart
 
 /** 
- *! converter
+ *! converter App
  */
 
  const dropList = document.querySelectorAll("form select"),
@@ -297,9 +294,6 @@ window.clearCart = clearCart
     }
 
 
-    
-
-
     /**
   *! Checkout buttons
   */
@@ -341,5 +335,6 @@ function closeOrder(order) {
   overlay.classList.remove('active')
 }
 
+ 
 
  
