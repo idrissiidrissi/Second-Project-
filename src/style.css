@@ -1,6 +1,3 @@
-/*Changing default styles of the browser*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 * {
   margin: 0;
 
@@ -235,6 +232,13 @@ h3 {
 
 .checkout {
   background-color: green;
+}
+button {
+  cursor: pointer;
+}
+
+button:hover{
+  color: red;
 }
 .removeAll {
   background-color: red;
@@ -547,7 +551,7 @@ form button:hover{
 
 
 /** 
-* ! Checkout button styles
+* ! Checkout button pop up text styles
 */
 
 .order {
@@ -601,24 +605,6 @@ form button:hover{
   padding: 10px 15px;
 }
 
-button {
-    cursor: pointer;
-}
-
-button:hover{
-    color: red;
-}
-button {
-  background-color: aqua;
-  font-weight: bold;
-}
-.con {
-  color: #4534fe;
-  text-decoration: underline;
-}
-
-
-
 #overlay {
   position: fixed;
   opacity: 0;
@@ -635,6 +621,3 @@ button {
   opacity: 1;
   pointer-events: all;
 }
-
-
-       
